@@ -7,13 +7,31 @@ subtitle    : DVDC and SPDC Meetup
 
 <q> Slidify helps __create__, customize and share, elegant, dynamic and interactive HTML5 documents using R Markdown.</q>
 
+---
+
+<iframe src='assets/img/create_deck.svg' width=960px></iframe>
+
+--- .segue bg:blue
+
+## Demo 1 | Create
+
 --- .nobackground .quote
 
 <q> Slidify helps create, __customize__ and share, elegant, dynamic and interactive HTML5 documents using R Markdown.</q>
 
+---
+
+## Customization
+
+Slidify is highly modular and attempts to achieve clean separation of content from view and behavior. There are several ways to customize a document.
+
+> 1. Frameworks
+> 2. Layouts
+> 3. Widgets
+
 --- .segue bg:blue
 
-## Frameworks
+## Demo 2 | Frameworks
 
 --- .segue bg:indigo
 
@@ -297,7 +315,7 @@ This is an explanation
 
 ## Interactive Chart
 
-```{r ichart, results = 'hide', tidy = F}
+```{r ichart, results = 'hide', tidy = F, message = F}
 require(rCharts)
 haireye = as.data.frame(HairEyeColor)
 n1 <- nPlot(Freq ~ Hair, 

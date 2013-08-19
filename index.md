@@ -7,13 +7,31 @@ subtitle    : DVDC and SPDC Meetup
 
 <q> Slidify helps __create__, customize and share, elegant, dynamic and interactive HTML5 documents using R Markdown.</q>
 
+---
+
+<iframe src='assets/img/create_deck.svg' width=960px></iframe>
+
+--- .segue bg:blue
+
+## Demo 1 | Create
+
 --- .nobackground .quote
 
 <q> Slidify helps create, __customize__ and share, elegant, dynamic and interactive HTML5 documents using R Markdown.</q>
 
+---
+
+## Customization
+
+Slidify is highly modular and attempts to achieve clean separation of content from view and behavior. There are several ways to customize a document.
+
+> 1. Frameworks
+> 2. Layouts
+> 3. Widgets
+
 --- .segue bg:blue
 
-## Frameworks
+## Demo 2 | Frameworks
 
 --- .segue bg:indigo
 
@@ -362,14 +380,14 @@ qplot(wt, mpg, data = mtcars)
 ## MotionPlot
 
 <!-- MotionChart generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Aug 19 16:14:27 2013 -->
+<!-- Mon Aug 19 16:24:35 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID25fc3678cc9 () {
+function gvisDataMotionChartID267b4da21979 () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -467,14 +485,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID25fc3678cc9() {
-  var data = gvisDataMotionChartID25fc3678cc9();
+function drawChartMotionChartID267b4da21979() {
+  var data = gvisDataMotionChartID267b4da21979();
   var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
      var chart = new google.visualization.MotionChart(
-       document.getElementById('MotionChartID25fc3678cc9')
+       document.getElementById('MotionChartID267b4da21979')
      );
      chart.draw(data,options);
     
@@ -498,9 +516,9 @@ options["height"] =    500;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartMotionChartID25fc3678cc9);
+  callbacks.push(drawChartMotionChartID267b4da21979);
 })();
-function displayChartMotionChartID25fc3678cc9() {
+function displayChartMotionChartID267b4da21979() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -524,11 +542,11 @@ function displayChartMotionChartID25fc3678cc9() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID25fc3678cc9"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID267b4da21979"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID25fc3678cc9"
+<div id="MotionChartID267b4da21979"
   style="width: 600px; height: 500px;">
 </div>
 
@@ -593,13 +611,6 @@ This is an explanation
 
 ```r
 require(rCharts)
-```
-
-```
-## Loading required package: rCharts
-```
-
-```r
 haireye = as.data.frame(HairEyeColor)
 n1 <- nPlot(Freq ~ Hair, 
   group = 'Eye',
