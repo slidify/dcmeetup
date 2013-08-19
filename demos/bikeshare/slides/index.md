@@ -171,7 +171,7 @@ $number
 [1] 72
 
 $free
-[1] 32
+[1] 31
 
 $fillColor
 [1] #D7191C
@@ -239,9 +239,9 @@ bike <- lapply(bike, function(station){within(station, {
 
 ```
 <b>W 52 St &amp; 11 Ave</b><br>
-<b>Free Docks: </b> 32 <br>
-<b>Available Bikes:</b> 5<br>
-<b>Retrieved At:</b> 2013-08-19T21:21:37.059673
+<b>Free Docks: </b> 31 <br>
+<b>Available Bikes:</b> 6<br>
+<b>Retrieved At:</b> 2013-08-19T22:32:15.379168
 ```
 
 
@@ -250,9 +250,9 @@ bike <- lapply(bike, function(station){within(station, {
 ### Popup
 
 <b>W 52 St &amp; 11 Ave</b><br>
-<b>Free Docks: </b> 32 <br>
-<b>Available Bikes:</b> 5<br>
-<b>Retrieved At:</b> 2013-08-19T21:21:37.059673
+<b>Free Docks: </b> 31 <br>
+<b>Available Bikes:</b> 6<br>
+<b>Retrieved At:</b> 2013-08-19T22:32:15.379168
 
 
 *** =pnotes

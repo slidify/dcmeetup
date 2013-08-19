@@ -263,7 +263,7 @@ L1
 ---
 
 ```{r echo = F}
-L1$save('maps/map4.html')
+L1$save('maps/map4.html', cdn = TRUE)
 ```
 
 
