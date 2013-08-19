@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slidify and rCharts</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Slidify and rCharts">
+  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/solarized_light.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
+<link rel=stylesheet href="./assets/css/mainapp.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  <script src="libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
+<script src="libraries/widgets/nvd3/js/d3.v3.min.js"></script>
+<script src="libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
+<script src="libraries/widgets/nvd3/js/fisheye.js"></script>
+
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/slidify_logo.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/slidify_logo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Slidify and rCharts</h1>
+    <h2>DVDC and SPDC Meetup</h2>
+    <p>Ramnath Vaidyanathan<br/>McGill University</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground quote" id="slide-2" style="background:;">
+  <article data-timings="">
+    <p><q> Slidify helps <strong>create</strong>, customize and share, elegant, dynamic and interactive HTML5 documents using R Markdown.</q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground quote" id="slide-3" style="background:;">
+  <article data-timings="">
+    <p><q> Slidify helps create, <strong>customize</strong> and share, elegant, dynamic and interactive HTML5 documents using R Markdown.</q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-4" style="background:blue;">
+  <hgroup>
+    <h2>Frameworks</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-5" style="background:indigo;">
+  <hgroup>
+    <h2>How Slidify Works?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/knit.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/split_apply_combine.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/split.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/apply.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/combine.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-11" style="background:indigo;">
+  <hgroup>
+    <h2>Journey of a Slide</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="bigger" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Slide</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>--- {class: class1, bg: yellow, id: id1}
+
+## Slide Title
+
+Slide Contents
+
+*** =pnotes
+
+Some notes
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/raw_slide.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <article data-timings="">
+    <p><a class='example'>Payload</a></p>
+
+<pre><code>$html
+[1] &quot;&lt;h2&gt;Slide Title&lt;/h2&gt;\n\n&lt;p&gt;Slide Contents&lt;/p&gt;\n&quot;
+
+$header
+[1] &quot;&lt;h2&gt;Slide Title&lt;/h2&gt;&quot;
+
+$level
+[1] &quot;2&quot;
+
+$title
+[1] &quot;Slide Title&quot;
+
+$content
+[1] &quot;&lt;p&gt;Slide Contents&lt;/p&gt;\n&quot;
+
+$class
+[1] &quot;class1&quot;
+
+$bg
+[1] &quot;yellow&quot;
+
+$id
+[1] &quot;id1&quot;
+
+$pnotes
+$pnotes$html
+[1] &quot;&lt;p&gt;Some notes&lt;/p&gt;\n&quot;
+
+$pnotes$level
+[1] &quot;&quot;
+
+$pnotes$title
+[1] &quot;&quot;
+
+$pnotes$content
+[1] &quot;&lt;p&gt;Some notes&lt;/p&gt;\n&quot;
+
+$pnotes$name
+[1] &quot;pnotes&quot;
+
+
+$blocks
+list()
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/parse_slide.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="RAW bigger" id="slide-16" style="background:;">
+  <article data-timings="">
+    <p><a class='example'>Layout</a></p>
+
+<pre><code>&lt;slide class=&quot;{{ slide.class }}&quot; id=&quot;{{ slide.id }}&quot; style=&quot;background:{{{ slide.bg }}};&quot;&gt;
+  {{# slide.header }}
+  &lt;hgroup&gt;
+    {{{ slide.header}}}
+  &lt;/hgroup&gt;
+  {{/ slide.header }}
+  &lt;article data-timings=&quot;{{ slide.dt }}&quot;&gt;
+    {{{ slide.content }}}
+  &lt;/article&gt;
+  &lt;!-- Presenter Notes --&gt;
+  {{# slide.pnotes }}
+  &lt;aside class=&quot;note&quot; id=&quot;{{ id }}&quot;&gt;
+    &lt;section&gt;
+      {{{ html }}}
+    &lt;/section&gt;
+  &lt;/aside&gt;
+  {{/ slide.pnotes }}
+&lt;/slide&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/layout_slide.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="bigger" id="slide-18" style="background:;">
+  <article data-timings="">
+    <p><a class='example'>Rendered</a></p>
+
+<pre><code>&lt;slide class=&quot;class1&quot; id=&quot;id1&quot; style=&quot;background:yellow;&quot;&gt;
+  &lt;hgroup&gt;
+    &lt;h2&gt;Slide Title&lt;/h2&gt;
+  &lt;/hgroup&gt;
+  &lt;article data-timings=&quot;&quot;&gt;
+    &lt;p&gt;Slide Contents&lt;/p&gt;
+
+  &lt;/article&gt;
+  &lt;!-- Presenter Notes --&gt;
+  &lt;aside class=&quot;note&quot; id=&quot;&quot;&gt;
+    &lt;section&gt;
+      &lt;p&gt;Some notes&lt;/p&gt;
+
+    &lt;/section&gt;
+  &lt;/aside&gt;
+&lt;/slide&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <article data-timings="">
+    <iframe src='assets/img/render_slide.svg' width=800px height=250px>
+</iframe> 
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class1" id="id1" style="background:yellow;">
+  <hgroup>
+    <h2>Slide Title</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Slide Contents</p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>Some notes</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="segue nobackground dark" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Slide Properties</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <article data-timings="">
+    <p><img style='margin-top: -40px' class="center" src='assets/img/slide_properties.svg' width=960px height=250px></img> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Slide Properties</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th><strong>Variable</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>slide.title</code></td>
+<td>The title of the slide with no markup</td>
+</tr>
+<tr>
+<td><code>slide.header</code></td>
+<td>The title of the slide with markup</td>
+</tr>
+<tr>
+<td><code>slide.level</code></td>
+<td>The title header level (h1 - h6)</td>
+</tr>
+<tr>
+<td><code>slide.content</code></td>
+<td>The contents of the slide sans header</td>
+</tr>
+<tr>
+<td><code>slide.html</code></td>
+<td>The contents of the slide with header</td>
+</tr>
+<tr>
+<td><code>slide.num</code></td>
+<td>The number of the slide</td>
+</tr>
+<tr>
+<td><code>slide.id</code></td>
+<td>The id assigned to the slide</td>
+</tr>
+<tr>
+<td><code>slide.class</code></td>
+<td>The class assigned to the slide</td>
+</tr>
+<tr>
+<td><code>slide.bg</code></td>
+<td>The background assigned to the slide</td>
+</tr>
+<tr>
+<td><code>slide.myblock</code></td>
+<td>The slide block named myblock</td>
+</tr>
+<tr>
+<td><code>slide.blocks</code></td>
+<td>The slide blocks which are not named</td>
+</tr>
+<tr>
+<td><code>slide.rendered</code></td>
+<td>The rendered slide</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue nobackground dark" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Slide Properties</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Carousel Slide</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a class='example'>slide</a></p>
+
+<pre><code>--- &amp;carousel .span12
+
+## Carousel
+
+
+*** {class: active, img: &quot;http://placehold.it/960x500&quot;}
+
+Image 1
+
+*** {img: &quot;http://placehold.it/960x500&quot;}
+
+Image 2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="RAW smaller" id="slide-26" style="background:;">
+  <article data-timings="">
+    <p><a class='example'>layout</a></p>
+
+<pre><code>---
+layout: slide
+---
+
+{{{ slide.content }}}
+&lt;div id=&quot;{{slide.id}}-carousel&quot; class=&quot;carousel slide {{slide.class}}&quot;&gt;
+  &lt;!-- Indicators --&gt;
+  &lt;ol class=&quot;carousel-indicators&quot;&gt;
+    {{# slide.blocks }}
+    &lt;li data-target=&quot;#{{slide.id}}-carousel&quot; data-slide-to=&quot;{{num}}&quot; class=&quot;{{class}}&quot;&gt;&lt;/li&gt;
+    {{/ slide.blocks }}
+  &lt;/ol&gt;
+  &lt;!-- Wrapper for slides --&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    {{# slide.blocks }}
+    &lt;div class=&quot;item {{class}}&quot;&gt;
+      &lt;img src=&quot;{{img}}&quot; alt=&quot;{{alt}}&quot;&gt;
+      &lt;div class=&quot;carousel-caption&quot;&gt;{{{ content }}}&lt;/div&gt;
+    &lt;/div&gt;
+    {{/ slide.blocks }}
+  &lt;/div&gt;
+  &lt;!-- Controls --&gt;
+  &lt;a class=&quot;left carousel-control&quot; href=&quot;#{{slide.id}}-carousel&quot; data-slide=&quot;prev&quot;&gt;&amp;lsaquo;&lt;/a&gt;
+  &lt;a class=&quot;right carousel-control&quot; href=&quot;#{{slide.id}}-carousel&quot; data-slide=&quot;next&quot;&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="span12" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Carousel</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<p><a class='example'>view</a></p>
+
+<div id="slide-27-carousel" class="carousel slide span12">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#slide-27-carousel" data-slide-to="1" class="active"></li>
+    <li data-target="#slide-27-carousel" data-slide-to="2" class=""></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://placehold.it/960x500" alt="">
+      <div class="carousel-caption"><p>Image 1</p>
+</div>
+    </div>
+    <div class="item ">
+      <img src="http://placehold.it/960x500" alt="">
+      <div class="carousel-caption"><p>Image 2</p>
+</div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#slide-27-carousel" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control" href="#slide-27-carousel" data-slide="next">&rsaquo;</a>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground quote" id="slide-28" style="background:;">
+  <article data-timings="">
+    <p><q> Slidify helps create, customize and <strong>share</strong>, elegant, dynamic and interactive HTML5 documents using R Markdown.</q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="bigger" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>Publish</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Share your document easily on <a href="http://github.com">github</a>, <a href="http://rpubs.com">rpubs</a> and <a href="http://dropbox.com">dropbox</a></p>
+
+<pre><code>slidify(&#39;index.Rmd&#39;)
+publish(&#39;mydeck&#39;, &#39;ramnathv&#39;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground quote" id="slide-30" style="background:;">
+  <article data-timings="">
+    <p><q> Slidify helps create, customize and share, elegant, <strong>dynamic</strong> and interactive HTML5 documents using R Markdown.</q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>Dynamic</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code> ## A Simple Plot
+
+ ```{r simple-plot, fig.height = 6, fig.align = &#39;center&#39;, message = F}
+ require(ggplot2)
+ qplot(wt, mpg, data = mtcars)
+ ```
+
+ ---
+
+ ## MotionPlot
+
+ ```{r results = &#39;asis&#39;, commment = NA, message = F, echo = F}
+ require(googleVis)
+ M1 &lt;- gvisMotionChart(Fruits, idvar=&quot;Fruit&quot;, timevar=&quot;Year&quot;)
+ print(M1, tag = &#39;chart&#39;)
+ ```
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>A Simple Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+</code></pre>
+
+<p><img src="figure/simple-plot.png" title="plot of chunk simple-plot" alt="plot of chunk simple-plot" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>MotionPlot</h2>
+  </hgroup>
+  <article data-timings="">
+    <!-- MotionChart generated in R 3.0.1 by googleVis 0.4.3 package -->
+
+<!-- Mon Aug 19 16:14:27 2013 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataMotionChartID25fc3678cc9 () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ "Apples",
+2008,
+"West",
+98,
+78,
+20,
+"2008-12-31" 
+],
+[
+ "Apples",
+2009,
+"West",
+111,
+79,
+32,
+"2009-12-31" 
+],
+[
+ "Apples",
+2010,
+"West",
+89,
+76,
+13,
+"2010-12-31" 
+],
+[
+ "Oranges",
+2008,
+"East",
+96,
+81,
+15,
+"2008-12-31" 
+],
+[
+ "Bananas",
+2008,
+"East",
+85,
+76,
+9,
+"2008-12-31" 
+],
+[
+ "Oranges",
+2009,
+"East",
+93,
+80,
+13,
+"2009-12-31" 
+],
+[
+ "Bananas",
+2009,
+"East",
+94,
+78,
+16,
+"2009-12-31" 
+],
+[
+ "Oranges",
+2010,
+"East",
+98,
+91,
+7,
+"2010-12-31" 
+],
+[
+ "Bananas",
+2010,
+"East",
+81,
+71,
+10,
+"2010-12-31" 
+] 
+];
+data.addColumn('string','Fruit');
+data.addColumn('number','Year');
+data.addColumn('string','Location');
+data.addColumn('number','Sales');
+data.addColumn('number','Expenses');
+data.addColumn('number','Profit');
+data.addColumn('string','Date');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMotionChartID25fc3678cc9() {
+  var data = gvisDataMotionChartID25fc3678cc9();
+  var options = {};
+options["width"] =    600;
+options["height"] =    500;
+
+     var chart = new google.visualization.MotionChart(
+       document.getElementById('MotionChartID25fc3678cc9')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "motionchart";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartMotionChartID25fc3678cc9);
+})();
+function displayChartMotionChartID25fc3678cc9() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID25fc3678cc9"></script>
+ 
+
+<!-- divChart -->
+
+<div id="MotionChartID25fc3678cc9"
+  style="width: 600px; height: 500px;">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:;">
+  <hgroup>
+    <h2>HT to knitr and @yihui</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class='center' src='http://ecx.images-amazon.com/images/I/41kI1dxXGfL.jpg' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground quote" id="slide-35" style="background:;">
+  <article data-timings="">
+    <p><q> Slidify helps create, customize and share, elegant, dynamic and <strong>interactive</strong> HTML5 documents using R Markdown.</q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Interactive Quiz</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>--- &amp;radio  
+## Interactive Quiz
+
+What is 1 + 1?
+
+1. 1 
+2. _2_
+3. 3
+4. 4
+
+*** .hint
+
+This is a hint
+
+*** .explanation
+
+This is an explanation
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Interactive Quiz</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>What is 1 + 1?</p>
+
+<ol>
+<li>1 </li>
+<li><em>2</em></li>
+<li>3</li>
+<li>4</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>This is a hint</p>
+
+</div>
+<div class="quiz-explanation">
+  <p>This is an explanation</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="bigger" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Interactive Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">require(rCharts)
+</code></pre>
+
+<pre><code>## Loading required package: rCharts
+</code></pre>
+
+<pre><code class="r">haireye = as.data.frame(HairEyeColor)
+n1 &lt;- nPlot(Freq ~ Hair, 
+  group = &#39;Eye&#39;,
+  data = subset(haireye, Sex == &#39;Male&#39;),
+  type = &#39;multiBarChart&#39;
+)
+n1$print(&#39;chart1&#39;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-39" style="background:;">
+  <hgroup>
+    <h2>Interactive Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    <div id = 'chart1' class = 'rChart nvd3'></div>
+
+<script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart1()
+    });
+    function drawchart1(){  
+      var opts = {
+ "dom": "chart1",
+"width":    800,
+"height":    400,
+"x": "Hair",
+"y": "Freq",
+"group": "Eye",
+"type": "multiBarChart",
+"id": "chart1" 
+},
+        data = [
+ {
+ "Hair": "Black",
+"Eye": "Brown",
+"Sex": "Male",
+"Freq":     32 
+},
+{
+ "Hair": "Brown",
+"Eye": "Brown",
+"Sex": "Male",
+"Freq":     53 
+},
+{
+ "Hair": "Red",
+"Eye": "Brown",
+"Sex": "Male",
+"Freq":     10 
+},
+{
+ "Hair": "Blond",
+"Eye": "Brown",
+"Sex": "Male",
+"Freq":      3 
+},
+{
+ "Hair": "Black",
+"Eye": "Blue",
+"Sex": "Male",
+"Freq":     11 
+},
+{
+ "Hair": "Brown",
+"Eye": "Blue",
+"Sex": "Male",
+"Freq":     50 
+},
+{
+ "Hair": "Red",
+"Eye": "Blue",
+"Sex": "Male",
+"Freq":     10 
+},
+{
+ "Hair": "Blond",
+"Eye": "Blue",
+"Sex": "Male",
+"Freq":     30 
+},
+{
+ "Hair": "Black",
+"Eye": "Hazel",
+"Sex": "Male",
+"Freq":     10 
+},
+{
+ "Hair": "Brown",
+"Eye": "Hazel",
+"Sex": "Male",
+"Freq":     25 
+},
+{
+ "Hair": "Red",
+"Eye": "Hazel",
+"Sex": "Male",
+"Freq":      7 
+},
+{
+ "Hair": "Blond",
+"Eye": "Hazel",
+"Sex": "Male",
+"Freq":      5 
+},
+{
+ "Hair": "Black",
+"Eye": "Green",
+"Sex": "Male",
+"Freq":      3 
+},
+{
+ "Hair": "Brown",
+"Eye": "Green",
+"Sex": "Male",
+"Freq":     15 
+},
+{
+ "Hair": "Red",
+"Eye": "Green",
+"Sex": "Male",
+"Freq":      7 
+},
+{
+ "Hair": "Blond",
+"Eye": "Green",
+"Sex": "Male",
+"Freq":      8 
+} 
+]
+  
+      var data = d3.nest()
+        .key(function(d){
+          return opts.group === undefined ? 'main' : d[opts.group]
+        })
+        .entries(data)
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+         
+        
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-40" style="background:blue;">
+  <hgroup>
+    <h2>Interactive Slides Demo</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-41" style="background:;">
+  <hgroup>
+    <h2>Interactive Visualizations</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="fill nobackground" id="slide-42" style="background:;">
+  <article data-timings="">
+    <p><img src="assets/img/rCharts.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="quote" id="slide-43" style="background:;">
+  <article data-timings="">
+    <p><q>rCharts is an R package to create, customize and share interactive visualizations, using a lattice-like formula interface.</q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-44" style="background:;">
+  <hgroup>
+    <h2>rCharts Demos</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-45" style="background:;">
+  <hgroup>
+    <h2>Basic Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">r1 &lt;- rPlot(mpg ~ wt | am + vs, 
+  data = mtcars, 
+  color = &#39;gear&#39;,
+  type = &#39;point&#39;
+)
+r1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-46" style="background:;">
+  <article data-timings="">
+    <iframe src=figure/unnamed-chunk-8.html seamless></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-47" style="background:;">
+  <hgroup>
+    <h2>Add Controls</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">r1$addControls(&quot;x&quot;, &quot;wt&quot;, names(mtcars))
+r1$addControls(&quot;y&quot;, &quot;mpg&quot;, names(mtcars))
+r1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-48" style="background:;">
+  <article data-timings="">
+    <iframe src=figure/unnamed-chunk-9.html seamless></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-49" style="background:;">
+  <hgroup>
+    <h2>Publish Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-50" style="background:;">
+  <hgroup>
+    <h2>Credits</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Kenton Russel and Thomas Reinholdsson for coauthoring rCharts.</li>
+<li>Yihui Xie for knitr.</li>
+<li>Joe Cheng for Shiny.</li>
+<li>Jeffrey Horner and RStudio for Markdown.</li>
+<li>Hadley Wickham for several R packages.</li>
+<li>Authors of all the JS Libraries I have liberally used.</li>
+<li>Authors of several presentation libraries in Ruby/Python/JS.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title=''>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title=''>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Frameworks'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='How Slidify Works?'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title=''>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title=''>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title=''>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title=''>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title=''>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Journey of a Slide'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Slide'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title=''>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title=''>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title=''>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title=''>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title=''>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title=''>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title=''>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Slide Title'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Slide Properties'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title=''>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Slide Properties'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Slide Properties'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Carousel Slide'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title=''>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Carousel'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title=''>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='Publish'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title=''>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Dynamic'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='A Simple Plot'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='MotionPlot'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='HT to knitr and @yihui'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title=''>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Interactive Quiz'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Interactive Quiz'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Interactive Chart'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='Interactive Chart'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='Interactive Slides Demo'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='Interactive Visualizations'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title=''>
+         42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title=''>
+         43
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='rCharts Demos'>
+         44
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=45 title='Basic Plot'>
+         45
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title=''>
+         46
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='Add Controls'>
+         47
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title=''>
+         48
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='Publish Chart'>
+         49
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='Credits'>
+         50
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
